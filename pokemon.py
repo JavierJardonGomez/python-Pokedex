@@ -10,6 +10,9 @@ def get_pokemon(name_pokemon="ditto"):
 
     return pokemon_data
 
+def get_moves(pokemon_data):
+    pass
+
 if __name__ == "__main__":
     
     print("********Prueba pokemon*********")
