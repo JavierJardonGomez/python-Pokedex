@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ url_for('static', filename='styles/style.css') }}" rel="stylesheet" />
+    <title>Pokedex</title>
+</head>
+<body>
+    <h1>Pokedex</h1>
+    <h3>{{ name }} : {{ order }}</h3>
+    <img src="{{ sprite }}"/>
+    <form action="/pokemon">
+        <input type="text" name="pokemon_name" id="pokemon_name" placeholder="Enter a pokemon name"/>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
