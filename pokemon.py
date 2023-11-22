@@ -10,12 +10,20 @@ def get_pokemon(name_pokemon="ditto"):
 
     return pokemon_data
 
-def get_tipos_pokemon(pokemon_data):
+def get_types_pokemon(pokemon_data):
     string = "Tipo: "
-    print(len(pokemon_data["types"]))
+
     for type_data in pokemon_data["types"]:
         string += type_data["type"]["name"] + " "
     return string
+
+def get_abilities_pokemon(pokemon_data):
+    string = "Abilities: "
+
+    for ability_data in pokemon_data["abilities"]:
+        string += ability_data["ability"]["name"] + " "
+    return string
+
 if __name__ == "__main__":
     
     print("********Prueba pokemon*********")
@@ -24,7 +32,9 @@ if __name__ == "__main__":
 
     pokemon_data = get_pokemon(pokemon_name)
 
-    print(get_tipos_pokemon(pokemon_data))
+    print(get_types_pokemon(pokemon_data))
+
+    print(get_abilities_pokemon(pokemon_data))
 
     print("\n")
     #print(pokemon_data["name"])

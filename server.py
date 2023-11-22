@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from pokemon import get_pokemon, get_tipos_pokemon
+from pokemon import get_pokemon, get_types_pokemon, get_abilities_pokemon
 from waitress import serve
 
 app = Flask(__name__)
@@ -17,7 +17,8 @@ def get_pokemon_by_name():
                            name=pokemon_data["name"],
                            order=pokemon_data["order"],
                            sprite=pokemon_data["sprites"]["front_default"],
-                           tipos=get_tipos_pokemon(pokemon_data))
+                           types=get_types_pokemon(pokemon_data),
+                           abilities=get_abilities_pokemon(pokemon_data))
 
 
 if __name__ == "__main__":
